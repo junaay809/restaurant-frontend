@@ -1,0 +1,1793 @@
+/* =====================================================
+   DAMMY & SPICE
+   ENTREES PAGE
+===================================================== */
+
+.appetizers-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f8f5ef;
+  color: #252525;
+
+  overflow-x: hidden;
+
+  padding-bottom: 0;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.appetizers-header {
+  width: 100%;
+
+  background: #ffffff;
+
+  position: relative;
+
+  z-index: 100;
+}
+
+
+.appetizers-top-header {
+  position: relative;
+
+  width: min(100% - 40px, 900px);
+
+  min-height: 105px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =====================================================
+   HEADER BUTTONS
+===================================================== */
+
+.appetizers-header-button {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #292929;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.appetizers-header-button:hover {
+  color: #e45b1c;
+
+  transform: scale(1.05);
+}
+
+
+.appetizers-header-button svg {
+  width: 28px;
+  height: 28px;
+
+  stroke-width: 1.8;
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.appetizers-menu-button {
+  display: flex;
+}
+
+
+/* =====================================================
+   MOBILE BACK BUTTON
+===================================================== */
+
+.appetizers-back-button {
+  display: none;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.appetizers-logo {
+  position: absolute;
+
+  left: 50%;
+  top: 56%;
+
+  transform: translate(-50%, -50%);
+
+  width: auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+
+.appetizers-logo img {
+  width: 105px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.appetizers-cart-button {
+  position: relative;
+}
+
+
+.appetizers-cart-count {
+  position: absolute;
+
+  top: 2px;
+  right: 0;
+
+  min-width: 20px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e87522;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   SIDE MENU
+===================================================== */
+
+.appetizers-side-menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  z-index: 500;
+}
+
+
+.appetizers-side-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: min(420px, 82vw);
+  height: 100vh;
+
+  background: #ffffff;
+
+  z-index: 501;
+
+  padding: 34px 30px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.appetizers-side-menu-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+
+.appetizers-side-menu-logo {
+  width: 115px;
+  height: auto;
+}
+
+
+.appetizers-close-button {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #292929;
+
+  cursor: pointer;
+}
+
+
+.appetizers-close-button svg {
+  width: 30px;
+  height: 30px;
+
+  stroke-width: 1.7;
+}
+
+
+/* =====================================================
+   SIDE NAVIGATION
+===================================================== */
+
+.appetizers-side-navigation {
+  margin-top: 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+
+.appetizers-side-navigation button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #555555;
+
+  font-size: 18px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.appetizers-side-navigation button:hover {
+  color: #e45b1c;
+
+  transform: translateX(4px);
+}
+
+
+.appetizers-side-navigation svg {
+  width: 22px;
+  height: 22px;
+
+  stroke-width: 1.7;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.appetizers-content {
+  width: min(100% - 40px, 900px);
+
+  margin: 0 auto;
+
+  padding: 30px 0 70px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.appetizers-introduction {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  text-align: center;
+
+  margin-bottom: 28px;
+}
+
+
+.appetizers-introduction div {
+  width: 42px;
+  height: 2px;
+
+  background: #e4cdb5;
+
+  border-radius: 2px;
+}
+
+
+.appetizers-introduction h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  color: #292929;
+}
+
+
+/* =====================================================
+   COUNTRY FILTER ROW
+===================================================== */
+
+.appetizers-filter-row {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+
+.appetizers-country-scroll {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+
+.appetizers-country-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =====================================================
+   COUNTRY BUTTONS
+===================================================== */
+
+.appetizers-country-button {
+  flex-shrink: 0;
+
+  padding: 10px 20px;
+
+  border: 1px solid #e4ded5;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  color: #555555;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.appetizers-country-button:hover {
+  border-color: #e45b1c;
+
+  color: #e45b1c;
+}
+
+
+.appetizers-country-button.active {
+  background: #e45b1c;
+
+  border-color: #e45b1c;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SORT BUTTON
+===================================================== */
+
+.appetizers-sort-button {
+  width: 50px;
+  height: 50px;
+
+  flex: 0 0 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2ded8;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #444444;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.appetizers-sort-button:hover,
+.appetizers-sort-button.active {
+  color: #e45b1c;
+
+  border-color: #e45b1c;
+}
+
+
+.appetizers-sort-button svg {
+  width: 22px;
+  height: 22px;
+
+  stroke-width: 1.8;
+}
+
+
+/* =====================================================
+   SORT PANEL
+===================================================== */
+
+.appetizers-sort-panel {
+  width: 100%;
+
+  margin: -5px 0 20px;
+
+  padding: 18px 14px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e6e0d8;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   SORT HEADER
+===================================================== */
+
+.appetizers-sort-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 4px;
+}
+
+
+.appetizers-sort-header h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  color: #292929;
+}
+
+
+.appetizers-sort-close {
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #eee9e2;
+
+  border-radius: 50%;
+
+  background: #faf9f6;
+
+  color: #b7b3ad;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+.appetizers-sort-close:hover {
+  color: #e45b1c;
+
+  border-color: #e45b1c;
+}
+
+
+/* =====================================================
+   SORT OPTIONS
+===================================================== */
+
+.appetizers-sort-panel button:not(.appetizers-sort-close) {
+  width: 100%;
+
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #eeeae4;
+
+  border-radius: 12px;
+
+  background: #faf9f6;
+
+  color: #555555;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.appetizers-sort-panel button:not(.appetizers-sort-close):hover,
+.appetizers-sort-panel button:not(.appetizers-sort-close).active {
+  background: #f8e9dd;
+
+  border-color: #f1d7c5;
+
+  color: #e45b1c;
+}
+
+
+/* =====================================================
+   FOOD LIST
+===================================================== */
+
+.appetizers-list {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+}
+
+
+/* =====================================================
+   FOOD CARD
+===================================================== */
+
+.appetizer-item {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 175px;
+
+  padding: 16px 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #e4dfd8;
+
+  background: transparent;
+
+  transition:
+    background 0.2s ease;
+}
+
+
+.appetizer-item:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =====================================================
+   FOOD IMAGE
+===================================================== */
+
+.appetizer-image {
+  width: 195px;
+  height: 155px;
+
+  flex: 0 0 195px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #e6dfd5;
+}
+
+
+.appetizer-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.appetizer-item:hover .appetizer-image img {
+  transform: scale(1.04);
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.appetizer-information {
+  flex: 1;
+
+  min-width: 0;
+
+  padding-right: 8px;
+}
+
+
+.appetizer-information h2 {
+  margin: 0 0 5px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  color: #292929;
+}
+
+
+.appetizer-country {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #e45b1c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+.appetizer-information p {
+  max-width: 430px;
+
+  margin: 0 0 10px;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.appetizer-actions {
+  width: 50px;
+
+  flex: 0 0 50px;
+
+  min-height: 145px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 5px 0;
+}
+
+
+/* =====================================================
+   FAVORITE
+===================================================== */
+
+.appetizer-favorite {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #999999;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.appetizer-favorite:hover {
+  color: #e45b1c;
+
+  transform: scale(1.08);
+}
+
+
+.appetizer-favorite svg {
+  width: 25px;
+  height: 25px;
+
+  stroke-width: 1.6;
+}
+
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+.appetizer-add-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e45b1c;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.appetizer-add-button:hover {
+  background: #d44f14;
+
+  transform: scale(1.06);
+}
+
+
+.appetizer-add-button svg {
+  width: 21px;
+  height: 21px;
+
+  stroke-width: 2;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.appetizers-empty-state {
+  width: 100%;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+.appetizers-empty-state h2 {
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+
+  color: #292929;
+}
+
+
+.appetizers-empty-state p {
+  margin: 0;
+
+  color: #888888;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   BOTTOM NAVIGATION
+===================================================== */
+
+.appetizers-bottom-navigation {
+  display: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .appetizers-top-header {
+    width: calc(100% - 28px);
+
+    min-height: 88px;
+
+    padding: 0 14px;
+  }
+
+
+  .appetizers-logo {
+    top: 58%;
+  }
+
+
+  .appetizers-logo img {
+    width: 95px;
+  }
+
+
+  .appetizers-content {
+    width: calc(100% - 28px);
+
+    padding-top: 25px;
+  }
+
+
+  .appetizers-introduction h1 {
+    font-size: 34px;
+  }
+
+
+  .appetizer-item {
+    min-height: 150px;
+
+    gap: 17px;
+
+    padding: 13px 6px;
+  }
+
+
+  .appetizer-image {
+    width: 170px;
+    height: 135px;
+
+    flex-basis: 170px;
+  }
+
+
+  .appetizer-information h2 {
+    font-size: 20px;
+  }
+
+
+  .appetizer-information p {
+    font-size: 12px;
+  }
+
+
+  .appetizer-actions {
+    width: 44px;
+
+    flex-basis: 44px;
+
+    min-height: 125px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .appetizers-page {
+    padding-bottom: 74px;
+  }
+
+
+  /* HEADER */
+
+  .appetizers-top-header {
+    width: calc(100% - 24px);
+
+    min-height: 82px;
+
+    padding: 0 12px;
+  }
+
+
+  /* HAMBURGER OFF */
+
+  .appetizers-menu-button {
+    display: none;
+  }
+
+
+  /* BACK ON */
+
+  .appetizers-back-button {
+    display: flex;
+  }
+
+
+  .appetizers-header-button {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .appetizers-header-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  /* LOGO */
+
+  .appetizers-logo {
+    top: 60%;
+  }
+
+
+  .appetizers-logo img {
+    width: 90px;
+  }
+
+
+  /* CART */
+
+  .appetizers-cart-button {
+    margin-left: auto;
+  }
+
+
+  .appetizers-cart-count {
+    top: -2px;
+    right: -2px;
+
+    min-width: 19px;
+    height: 19px;
+
+    font-size: 9px;
+  }
+
+
+  /* MAIN */
+
+  .appetizers-content {
+    width: calc(100% - 24px);
+
+    padding: 24px 0 25px;
+  }
+
+
+  /* TITLE */
+
+  .appetizers-introduction {
+    gap: 8px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .appetizers-introduction div {
+    width: 28px;
+  }
+
+
+  .appetizers-introduction h1 {
+    font-size: 29px;
+  }
+
+
+  /* COUNTRY FILTER */
+
+  .appetizers-filter-row {
+    gap: 8px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .appetizers-country-scroll {
+    gap: 7px;
+  }
+
+
+  .appetizers-country-button {
+    padding: 9px 14px;
+
+    font-size: 11px;
+  }
+
+
+  .appetizers-sort-button {
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+
+    border-radius: 12px;
+  }
+
+
+  .appetizers-sort-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+/* =================================================
+     SORT PANEL
+  ================================================= */
+
+  .appetizers-sort-panel {
+    margin-top: -3px;
+
+    padding: 14px 10px 10px;
+
+    gap: 7px;
+
+    border-radius: 15px;
+  }
+
+
+  .appetizers-sort-header {
+    margin-bottom: 3px;
+  }
+
+
+  .appetizers-sort-header h3 {
+    font-size: 23px;
+  }
+
+
+  .appetizers-sort-close {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    font-size: 18px;
+  }
+
+
+  .appetizers-sort-panel button:not(.appetizers-sort-close) {
+    width: 100%;
+
+    min-height: 56px;
+
+    padding: 0 14px;
+
+    border-radius: 11px;
+
+    font-size: 10px;
+  }
+
+
+  /* FOOD CARD */
+
+  .appetizer-item {
+    min-height: 125px;
+
+    gap: 12px;
+
+    padding: 10px 2px;
+  }
+
+
+  /* IMAGE */
+
+  .appetizer-image {
+    width: 125px;
+    height: 108px;
+
+    flex: 0 0 125px;
+
+    border-radius: 11px;
+  }
+
+
+  /* INFORMATION */
+
+  .appetizer-information {
+    padding-right: 0;
+  }
+
+
+  .appetizer-information h2 {
+    margin-bottom: 3px;
+
+    font-size: 16px;
+
+    line-height: 1.15;
+  }
+
+
+  .appetizer-country {
+    margin-bottom: 4px;
+
+    font-size: 10px;
+  }
+
+
+  .appetizer-information p {
+    margin-bottom: 6px;
+
+    font-size: 10px;
+
+    line-height: 1.35;
+  }
+
+
+.appetizer-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 14px;
+}
+
+
+.entree-rating {
+  gap: 2px;
+
+  font-size: 10px;
+}
+
+
+.entree-rating svg {
+  width: 12px;
+
+  height: 12px;
+}
+
+  /* ACTIONS */
+
+  .appetizer-actions {
+    width: 34px;
+
+    flex: 0 0 34px;
+
+    min-height: 100px;
+
+    padding: 2px 0;
+  }
+
+
+  .appetizer-favorite {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .appetizer-favorite svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .appetizer-add-button {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .appetizer-add-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* =================================================
+     MOBILE BOTTOM NAV
+  ================================================= */
+
+  .appetizers-bottom-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 5px 8px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-top: 1px solid #e8e2da;
+
+    z-index: 300;
+
+    box-shadow:
+      0 -4px 18px rgba(0, 0, 0, 0.05);
+  }
+
+
+  .appetizers-bottom-navigation button {
+    width: 25%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777777;
+
+    cursor: pointer;
+  }
+
+
+  .appetizers-bottom-navigation button svg {
+    width: 21px;
+    height: 21px;
+
+    stroke-width: 1.7;
+  }
+
+
+  .appetizers-bottom-navigation button span {
+    font-size: 9px;
+
+    line-height: 1.1;
+  }
+
+
+  .appetizers-bottom-navigation button.active {
+    color: #e45b1c;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .appetizers-top-header {
+    width: calc(100% - 20px);
+
+    padding: 0 10px;
+  }
+
+
+  .appetizers-logo img {
+    width: 82px;
+  }
+
+
+  .appetizers-content {
+    width: calc(100% - 20px);
+  }
+
+
+  .appetizers-introduction h1 {
+    font-size: 26px;
+  }
+
+
+  .appetizers-introduction div {
+    width: 22px;
+  }
+
+
+  .appetizers-country-button {
+    padding: 8px 12px;
+
+    font-size: 10px;
+  }
+
+
+  .appetizers-sort-button {
+    width: 43px;
+    height: 43px;
+
+    flex-basis: 43px;
+  }
+
+
+  .appetizer-item {
+    gap: 9px;
+
+    min-height: 112px;
+
+    padding: 8px 1px;
+  }
+
+
+  .appetizer-image {
+    width: 110px;
+    height: 96px;
+
+    flex-basis: 110px;
+  }
+
+
+  .appetizer-information h2 {
+    font-size: 14px;
+  }
+
+
+  .appetizer-country {
+    font-size: 9px;
+  }
+
+
+  .appetizer-information p {
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+
+
+.appetizer-price {
+  gap: 5px;
+
+  font-size: 13px;
+}
+
+
+.entree-rating {
+  font-size: 9px;
+}
+
+
+.entree-rating svg {
+  width: 11px;
+
+  height: 11px;
+}
+
+
+  .appetizer-actions {
+    width: 29px;
+
+    flex-basis: 29px;
+
+    min-height: 90px;
+  }
+
+
+  .appetizer-favorite {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .appetizer-favorite svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .appetizer-add-button {
+    width: 29px;
+    height: 29px;
+  }
+
+
+  .appetizer-add-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 340px) {
+
+  .appetizers-top-header {
+    width: calc(100% - 16px);
+
+    padding: 0 8px;
+  }
+
+
+  .appetizers-logo img {
+    width: 75px;
+  }
+
+
+  .appetizer-image {
+    width: 98px;
+    height: 88px;
+
+    flex-basis: 98px;
+  }
+
+
+  .appetizer-information h2 {
+    font-size: 13px;
+  }
+
+
+  .appetizer-information p {
+    font-size: 8px;
+  }
+
+
+.appetizer-price {
+  gap: 4px;
+
+  font-size: 12px;
+}
+
+
+.entree-rating {
+  font-size: 8px;
+}
+
+
+.entree-rating svg {
+  width: 10px;
+
+  height: 10px;
+}
+
+}
+
+/* =====================================================
+   ENTREE PRICE + RATING
+===================================================== */
+
+.entree-price {
+  display: flex;
+
+  align-items: center;
+
+  color: #252525;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   ENTREE RATING
+===================================================== */
+
+.entree-rating {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 3px;
+  margin-left: 10px;
+
+  color: #e45b1c;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+.entree-rating svg {
+  width: 14px;
+
+  height: 14px;
+
+  flex-shrink: 0;
+
+  color: #e45b1c;
+
+  fill: currentColor;
+
+  stroke-width: 1.7;
+}
+
+/* =====================================================
+   FAVORITE BUTTON
+===================================================== */
+
+.favorite-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #4b4742;
+
+  cursor: pointer;
+
+  border-radius: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  box-shadow: none;
+
+  transition: color 0.2s ease;
+}
+
+
+/* HEART ICON */
+
+.favorite-button svg {
+  width: 28px;
+  height: 28px;
+
+  stroke-width: 1.8;
+
+  fill: none;
+
+  color: #4b4742;
+
+  transition:
+    color 0.2s ease,
+    fill 0.2s ease;
+}
+
+
+/* HOVER */
+
+.favorite-button:hover {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  color: #e87528;
+}
+
+
+.favorite-button:hover svg {
+  color: #e87528;
+}
+
+
+/* WHEN SELECTED */
+
+.favorite-button.active,
+.favorite-button.favorited {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* SELECTED HEART */
+
+.favorite-button.active svg,
+.favorite-button.favorited svg {
+  color: #e87528;
+  fill: #e87528;
+}
+
+
+/* CLICK / FOCUS */
+
+.favorite-button:active,
+.favorite-button:focus,
+.favorite-button:focus-visible {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.favorite-highlight {
+  outline: 3px solid #e87528;
+  border-radius: 12px;
+  transition: outline 0.3s ease;
+}
+
+.entree-rating {
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+}

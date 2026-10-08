@@ -1,0 +1,2856 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   DAMMY & SPICE - HOME PAGE
+======================================== */
+
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f8f5ef;
+  color: #252525;
+  overflow-x: hidden;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+  position: relative;
+
+  width: 100%;
+
+  background: #f8f5ef;
+
+  padding: 28px 20px 14px;
+
+  z-index: 1000;
+}
+
+
+/* ========================================
+   TOP HEADER
+======================================== */
+
+.top-header {
+  position: relative;
+
+  width: 100%;
+  max-width: 1200px;
+
+  min-height: 80px;
+
+  margin: 0 auto;
+
+  padding: 0 50px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  column-gap: 30px;
+}
+
+
+/* ========================================
+   HEADER ICON BUTTONS
+======================================== */
+
+.icon-button,
+.cart-button {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #292929;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.icon-button:hover,
+.cart-button:hover {
+  transform: scale(1.06);
+
+  color: #e45b1c;
+}
+
+
+.icon-button svg,
+.cart-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* ========================================
+   HAMBURGER BUTTON
+======================================== */
+
+.menu-button {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  justify-self: start;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #333333;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+
+.menu-button:hover {
+  color: #e87522;
+}
+
+
+/* ========================================
+   CLICKABLE CENTER LOGO
+======================================== */
+
+.brand-logo {
+  position: relative;
+
+  left: auto;
+  top: auto;
+
+  transform: none;
+
+  grid-column: 2;
+
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  z-index: 4;
+}
+
+
+.brand-logo img {
+  display: block;
+
+  width: 180px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.2s ease;
+}
+
+
+.brand-logo:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ========================================
+   SHOPPING CART
+======================================== */
+
+.cart-button {
+  position: relative;
+
+  justify-self: end;
+
+  z-index: 5;
+}
+
+
+/* ========================================
+   CART COUNT
+======================================== */
+
+.cart-count {
+  position: absolute;
+
+  top: -2px;
+  right: -2px;
+
+  min-width: 20px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e87522;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* ========================================
+   DELIVERY ADDRESS
+======================================== */
+
+.address-selector {
+  width: fit-content;
+
+  max-width: 330px;
+
+  margin: 18px auto 0;
+
+  padding: 10px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #eee8dc;
+
+  color: #555555;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+
+.address-selector svg {
+  flex-shrink: 0;
+}
+
+
+.address-text {
+  margin: 0;
+
+  max-width: 235px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   SIDE MENU HOME LINK
+   Kept for desktop hamburger support
+======================================== */
+
+.side-menu-home-link {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #292929;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+
+.side-menu-home-link:hover {
+  background: #eee8dc;
+
+  color: #e45b1c;
+
+  padding-left: 23px;
+}
+
+
+/* ========================================
+   MOBILE BOTTOM NAVIGATION
+======================================== */
+
+.mobile-bottom-navigation {
+  display: none;
+}
+
+
+/* ========================================
+   MENU OVERLAY
+======================================== */
+
+.menu-overlay,
+.mobile-menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1998;
+
+  cursor: pointer;
+}
+
+
+.menu-overlay {
+  background: rgba(0, 0, 0, 0.42);
+
+  opacity: 1;
+
+  animation: menuOverlayIn 0.25s ease;
+}
+
+
+@keyframes menuOverlayIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* ========================================
+   OLD SIDE MENU SUPPORT
+   Kept so existing classes do not break
+======================================== */
+
+.side-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: min(320px, 85vw);
+  height: 100vh;
+
+  z-index: 9999;
+
+  background: #f8f5ef;
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.16);
+
+  transform: translateX(-105%);
+
+  transition:
+    transform 0.35s ease;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+
+/* ========================================
+   OLD SIDE MENU HEADER
+======================================== */
+
+.side-menu-header {
+  min-height: 82px;
+
+  padding: 18px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5ded2;
+}
+
+
+.side-menu-logo {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.side-menu-logo img {
+  width: 145px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+.side-menu-close {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #292929;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.side-menu-close:hover {
+  background: #eee8dc;
+
+  color: #e45b1c;
+}
+
+
+/* ========================================
+   OLD SIDE MENU NAVIGATION
+======================================== */
+
+.side-menu-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 18px 14px;
+}
+
+
+.side-menu-nav button {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #292929;
+
+  text-align: left;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+
+.side-menu-nav button:hover {
+  background: #eee8dc;
+
+  color: #e45b1c;
+
+  padding-left: 23px;
+}
+
+
+/* ========================================
+   CURRENT MOBILE/DESKTOP SIDE MENU
+======================================== */
+
+.mobile-side-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: min(360px, 85vw);
+
+  background: #ffffff;
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.12);
+
+  z-index: 1999;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  animation: slideMenuIn 0.28s ease-out;
+}
+
+
+@keyframes slideMenuIn {
+
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* ========================================
+   SIDE MENU HEADER
+======================================== */
+
+.mobile-menu-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 150px;
+
+  margin: 0;
+
+  padding: 30px 32px 24px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ========================================
+   SIDE MENU LOGO
+======================================== */
+
+.mobile-menu-logo {
+  display: flex;
+
+  align-items: center;
+
+  text-decoration: none;
+}
+
+
+.mobile-menu-logo img {
+  display: block;
+
+  width: 150px;
+  height: auto;
+}
+
+
+/* ========================================
+   SIDE MENU CLOSE BUTTON
+======================================== */
+
+.mobile-menu-close {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #333333;
+
+  cursor: pointer;
+}
+
+
+.mobile-menu-close:hover {
+  color: #e87522;
+}
+
+
+/* ========================================
+   SIDE MENU LINKS CONTAINER
+======================================== */
+
+.mobile-menu-links {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  padding: 22px 18px 35px;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   SIDE MENU LINKS
+======================================== */
+
+.mobile-menu-link {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 56px;
+
+  padding: 0 22px;
+
+  border-radius: 10px;
+
+  color: #555555;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.mobile-menu-link:hover {
+  background: #f8f5f1;
+
+  color: #e87522;
+}
+
+
+/* ========================================
+   DESKTOP HAMBURGER MENU ITEMS
+======================================== */
+
+.desktop-menu-only {
+  display: flex;
+}
+
+
+/* ========================================
+   HERO CAROUSEL
+======================================== */
+
+.hero-section {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  height: 390px;
+
+  margin: 12px auto 0;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+.hero-carousel {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+
+.hero-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+  width: 100%;
+
+  padding: 42px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.hero-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 6vw, 72px);
+
+  line-height: 0.98;
+
+  font-weight: 700;
+}
+
+
+.hero-content h2 span {
+  color: #e45b1c;
+}
+
+
+.hero-content p {
+  max-width: 440px;
+
+  margin: 20px 0 25px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   ORDER BUTTON
+======================================== */
+
+.primary-button {
+  padding: 13px 15px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e45b1c;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.primary-button:hover {
+  background: #c94c12;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   CAROUSEL INDICATORS
+======================================== */
+
+.carousel-indicators {
+  position: absolute;
+
+  bottom: 18px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.carousel-indicator {
+  width: 24px;
+  height: 4px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 3px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.carousel-indicator.active {
+  width: 32px;
+
+  background: #ffffff;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.search-section {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  margin: 24px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.search-section input {
+  flex: 1;
+
+  height: 50px;
+
+  min-width: 0;
+
+  padding: 0 18px;
+
+  border: 1px solid #e3ddd2;
+
+  border-radius: 25px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #292929;
+
+  font-size: 14px;
+}
+
+
+.search-section input::placeholder {
+  color: #999;
+}
+
+
+.search-section input:focus {
+  border-color: #e45b1c;
+}
+
+
+.search-section button,
+.search-button {
+  width: 50px;
+  height: 50px;
+
+  min-width: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #eee;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #e45b1c;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.search-section button:hover,
+.search-button:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.09);
+}
+
+
+.search-section button svg,
+.search-button svg {
+  width: 21px;
+  height: 21px;
+}
+
+
+/* ========================================
+   CATEGORIES
+======================================== */
+
+.categories-section {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  margin: 25px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+
+.categories-section::-webkit-scrollbar {
+  display: none;
+}
+
+
+.category {
+  min-width: 110px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+  padding: 0%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+
+.category-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #e45b1c;
+
+  border: 1px solid #e8e0d4;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.category:hover .category-icon {
+  background: #e45b1c;
+
+  color: #ffffff;
+
+  transform: translateY(3px);
+}
+
+
+.category-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+.category span {
+  white-space: nowrap;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #333;
+}
+
+
+/* ========================================
+   HOT DEALS
+======================================== */
+
+.hot-deals {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  min-height: 180px;
+
+  margin: 30px auto 0;
+
+  padding: 0;
+
+  border-radius: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #29231e 0%,
+      #332923 50%,
+      #4b3529 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   HOT DEALS CONTENT
+======================================== */
+
+.hot-deals-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 48%;
+
+  padding: 30px;
+}
+
+
+.hot-deals h2 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
+  line-height: 1.1;
+}
+
+
+.hot-deals h2 svg {
+  color: #e45b1c;
+}
+
+
+.hot-deals-fire {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 27px;
+
+  margin-left: 3px;
+
+  margin-top: -3px;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(228, 91, 28, 0.45)
+    );
+
+  animation:
+    firePop 1.8s ease-in-out infinite;
+}
+
+
+@keyframes firePop {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(-2deg);
+  }
+
+  50% {
+    transform: scale(1.12) rotate(2deg);
+  }
+
+}
+
+
+.hot-deals p {
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.hot-deals button {
+  padding: 10px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.hot-deals button:hover {
+  background: #e45b1c;
+
+  border-color: #e45b1c;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   HOT DEALS IMAGE - DESKTOP
+======================================== */
+
+.hot-deals-image {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 0;
+  right: 0;
+
+  width: 58%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.15) 8%,
+      rgba(0, 0, 0, 0.55) 20%,
+      black 35%,
+      black 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.15) 8%,
+      rgba(0, 0, 0, 0.55) 20%,
+      black 35%,
+      black 100%
+    );
+}
+
+
+.hot-deals-image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(41, 35, 30, 0.98) 0%,
+      rgba(41, 35, 30, 0.92) 18%,
+      rgba(41, 35, 30, 0.72) 32%,
+      rgba(41, 35, 30, 0.35) 48%,
+      rgba(41, 35, 30, 0.08) 65%,
+      rgba(41, 35, 30, 0) 100%
+    );
+}
+
+
+.hot-deals-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.hot-deals:hover .hot-deals-image img {
+  transform: scale(1.02);
+}
+
+
+/* ========================================
+   GENERAL CONTENT SECTIONS
+======================================== */
+
+.content-section {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  margin: 34px auto 0;
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+
+  color: #27231f;
+}
+
+
+.section-heading button {
+  border: none;
+
+  background: transparent;
+
+  color: #e45b1c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   POPULAR RESTAURANTS
+======================================== */
+
+.restaurant-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+.restaurant-card {
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.placeholder-image {
+  width: 100%;
+  height: 170px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e8e1d6;
+
+  color: #8b8276;
+
+  font-size: 14px;
+}
+
+
+.restaurant-card h3 {
+  margin: 13px 14px 6px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+.restaurant-meta {
+  margin: 0 14px 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+.restaurant-meta svg {
+  color: #e45b1c;
+}
+
+
+/* ========================================
+   RECOMMENDED
+======================================== */
+
+.recommended-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.recommended-item {
+  min-height: 90px;
+
+  padding: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ========================================
+   RECOMMENDED FOOD IMAGE
+======================================== */
+
+.small-image {
+  width: 72px;
+  height: 72px;
+
+  min-width: 72px;
+  max-width: 72px;
+
+  min-height: 72px;
+  max-height: 72px;
+
+  flex: 0 0 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #e8e1d6;
+
+  color: #8b8276;
+
+  font-size: 11px;
+}
+
+
+.small-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 13px;
+}
+
+
+.item-info {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.item-info h3 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.item-info span {
+  color: #888;
+
+  font-size: 11px;
+}
+
+
+.item-info strong {
+  margin-top: 2px;
+
+  color: #e45b1c;
+
+  font-size: 13px;
+}
+
+
+.add-button {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e45b1c;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+
+.add-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+/* ========================================
+   DESKTOP
+======================================== */
+
+@media (min-width: 769px) {
+
+  .site-header {
+    padding: 28px 20px 14px;
+  }
+
+
+  .top-header {
+    min-height: 80px;
+
+    padding: 0 50px;
+  }
+
+
+  .brand-logo img {
+    width: 180px;
+  }
+
+
+  .menu-button {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .cart-button {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .address-selector {
+    margin-top: 18px;
+  }
+}
+
+  /* ========================================
+   RECOMMENDED FOOD IMAGE
+======================================== */
+
+.small-image {
+  width: 72px;
+  height: 72px;
+
+  min-width: 72px;
+  max-width: 72px;
+
+  min-height: 72px;
+  max-height: 72px;
+
+  flex: 0 0 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #e8e1d6;
+
+  color: #8b8276;
+
+  font-size: 11px;
+}
+
+
+.small-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 13px;
+}
+
+
+.item-info {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.item-info h3 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.item-info span {
+  color: #888;
+
+  font-size: 11px;
+}
+
+
+.item-info strong {
+  margin-top: 2px;
+
+  color: #e45b1c;
+
+  font-size: 13px;
+}
+
+
+.add-button {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e45b1c;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+
+.add-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+/* ========================================
+   DESKTOP
+======================================== */
+
+@media (min-width: 769px) {
+
+  .site-header {
+    padding: 28px 20px 14px;
+  }
+
+
+  .top-header {
+    min-height: 80px;
+
+    padding: 0 50px;
+  }
+
+
+  .brand-logo img {
+    width: 180px;
+  }
+
+
+  .menu-button {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .cart-button {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .address-selector {
+    margin-top: 18px;
+  }
+
+
+  /* ======================================
+     DESKTOP SIDE MENU
+  ====================================== */
+
+  .mobile-side-menu {
+    width: 360px;
+  }
+
+
+  /*
+     Desktop menu can contain:
+
+     Home
+     Discover
+     My Orders
+     Profile
+     Appetizers
+     Entrées
+     Main Courses
+     Drinks
+     Desserts
+  */
+
+  .desktop-menu-only {
+    display: flex;
+  }
+
+
+  /* ======================================
+     DESKTOP HERO
+  ====================================== */
+
+  .hero-section {
+    margin-top: 12px;
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 18px 16px 10px;
+  }
+
+
+  .top-header {
+    min-height: 62px;
+
+    padding: 0 18px;
+  }
+
+
+  .brand-logo img {
+    width: 145px;
+  }
+
+
+  .menu-button {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .cart-button {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .address-selector {
+    margin-top: 14px;
+
+    padding: 9px 15px;
+
+    font-size: 13px;
+  }
+
+
+  .hero-section {
+    min-height: 350px;
+  }
+
+
+  .hero-content {
+    padding: 32px;
+  }
+
+
+  .hero-content h2 {
+    font-size: 44px;
+  }
+
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .hot-deals-content {
+    width: 100%;
+
+    height: 100%;
+
+    right: 0;
+    top: 0;
+
+    transform: none;
+
+    border-radius: 0%;
+
+    clip-path: none;
+  }
+
+
+  .hot-deals-image {
+    width: 58%;
+
+    height: 100%;
+
+    clip-path:
+      polygon(
+        15% 0,
+        100% 0,
+        100% 100%,
+        15% 100%,
+        0 50%
+      );
+  }
+
+
+  /* ======================================
+     MOBILE SIDE MENU
+  ====================================== */
+
+  .mobile-side-menu {
+    width: min(340px, 85vw);
+  }
+
+
+  /*
+     These desktop-only links are hidden
+     on mobile.
+  */
+
+  .desktop-menu-only {
+    display: none;
+  }
+
+
+  .mobile-menu-header {
+    min-height: 140px;
+
+    padding: 26px 24px 22px;
+  }
+
+
+  .mobile-menu-links {
+    padding: 24px 18px 35px;
+  }
+
+
+  .mobile-menu-link {
+    min-height: 54px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+  }
+
+
+  /* ======================================
+     MOBILE BOTTOM NAVIGATION
+  ====================================== */
+
+  .mobile-bottom-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    width: 100%;
+    height: 72px;
+
+    padding: 7px 10px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    box-shadow:
+      0 -4px 15px rgba(0, 0, 0, 0.06);
+
+    z-index: 1000;
+  }
+
+
+  .mobile-nav-link {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    height: 100%;
+
+    color: #555555;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+
+  .mobile-nav-link svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .mobile-nav-link:hover {
+    color: #e87522;
+  }
+
+
+  .mobile-nav-link.active {
+    color: #e87522;
+  }
+
+
+  /*
+     Prevent bottom navigation from
+     covering page content.
+  */
+
+  .home-page {
+    padding-bottom: 80px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    padding: 14px 16px 10px;
+  }
+
+
+  .brand-logo img {
+    width: 160px;
+  }
+
+
+  .icon-button,
+  .cart-button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .icon-button svg,
+  .cart-button svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  /* ======================================
+     MOBILE ADDRESS
+  ====================================== */
+
+  .address-selector {
+    width: 70%;
+
+    max-width: 260px;
+
+    height: 38px;
+
+    margin: 14px auto 0;
+
+    padding: 7px 10px;
+
+    gap: 6px;
+
+    border-radius: 20px;
+  }
+
+
+  .address-selector svg {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .address-text {
+    max-width: 190px;
+
+    font-size: 11px;
+  }
+
+
+  /* ======================================
+     MOBILE HERO
+  ====================================== */
+
+  .hero-section {
+    width: calc(100% - 24px);
+
+    min-height: 350px;
+
+    margin-top: 10px;
+
+    border-radius: 22px;
+  }
+
+
+  .hero-content {
+    padding: 28px 24px;
+  }
+
+
+  .hero-content h2 {
+    font-size: 39px;
+  }
+
+
+  .hero-content p {
+    max-width: 290px;
+
+    font-size: 12px;
+  }
+
+
+  .primary-button {
+    padding: 12px 21px;
+
+    font-size: 13px;
+  }
+
+
+  /* ======================================
+     MOBILE SEARCH
+  ====================================== */
+
+  .search-section {
+    width: calc(100% - 24px);
+
+    margin-top: 18px;
+
+    gap: 8px;
+  }
+
+
+  .search-section input {
+    height: 48px;
+
+    min-width: 0;
+
+    padding: 0 15px;
+
+    font-size: 12px;
+
+    border-radius: 24px;
+  }
+
+
+  .search-section button,
+  .search-button {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+
+  .search-section button svg,
+  .search-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* ======================================
+     MOBILE CATEGORIES
+  ====================================== */
+
+  .categories-section {
+    width: calc(100% - 24px);
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    justify-content: flex-start;
+  }
+
+
+  .category {
+    min-width: 70px;
+  }
+
+
+  .category-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+
+  .category-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .category span {
+    font-size: 10px;
+  }
+
+
+  /* ======================================
+     MOBILE HOT DEALS
+  ====================================== */
+
+  .hot-deals {
+    width: calc(100% - 24px);
+
+    min-height: 190px;
+
+    margin-top: 25px;
+
+    padding: 0;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        90deg,
+        #29231e 0%,
+        #352a24 48%,
+        #51382c 100%
+      );
+  }
+
+
+  .hot-deals-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 52%;
+
+    padding: 22px 0 22px 20px;
+  }
+
+
+  .hot-deals h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin: 0 0 8px;
+
+    font-size: 23px;
+
+    line-height: 1.05;
+
+    white-space: nowrap;
+  }
+
+
+  .hot-deals h2 span:first-child {
+    font-size: 23px;
+  }
+
+
+  .hot-deals-fire {
+    font-size: 21px;
+
+    margin-left: 0;
+
+    margin-top: -2px;
+  }
+
+
+  .hot-deals p {
+    margin: 0 0 16px;
+
+    max-width: 145px;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+  }
+
+
+  .hot-deals button {
+    padding: 8px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+  }
+
+
+  /* ======================================
+     MOBILE BURGER IMAGE
+  ====================================== */
+
+  .hot-deals-image {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    right: -8px;
+
+    transform: translateY(-50%);
+
+    width: 57%;
+    height: 125%;
+
+    overflow: hidden;
+
+    border-radius: 50% 0 0 50%;
+
+    clip-path: none;
+
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+
+  .hot-deals-image::before {
+    display: none;
+  }
+
+
+  .hot-deals-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+
+  /* ======================================
+     MOBILE CONTENT
+  ====================================== */
+
+  .content-section {
+    width: calc(100% - 24px);
+
+    margin-top: 28px;
+  }
+
+
+  .section-heading {
+    margin-bottom: 13px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 20px;
+  }
+
+
+  /* ======================================
+     MOBILE RESTAURANTS
+  ====================================== */
+
+  .restaurant-grid {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 13px;
+
+    scrollbar-width: none;
+  }
+
+
+  .restaurant-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .restaurant-card {
+    min-width: 220px;
+  }
+
+
+  .placeholder-image {
+    height: 145px;
+  }
+
+
+  /* ======================================
+     MOBILE RECOMMENDED
+  ====================================== */
+
+  .recommended-item {
+    min-height: 82px;
+  }
+
+
+  .small-image {
+    width: 62px;
+    height: 62px;
+  }
+
+
+  /* ======================================
+     MOBILE SIDE MENU LOGO
+  ====================================== */
+
+  .mobile-menu-logo img {
+    width: 135px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 480px) {
+
+  .mobile-menu-header {
+    min-height: 135px;
+
+    padding: 24px 22px 18px;
+  }
+
+
+  .mobile-menu-logo img {
+    width: 135px;
+  }
+
+
+  .mobile-menu-links {
+    padding: 18px 14px 30px;
+  }
+
+
+  .mobile-menu-link {
+    min-height: 54px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL SCREENS
+======================================== */
+
+@media (max-width: 390px) {
+
+  .brand-logo img {
+    width: 145px;
+  }
+
+
+  .hero-section {
+    min-height: 320px;
+  }
+
+
+  .hero-content {
+    padding: 24px 20px;
+  }
+
+
+  .hero-content h2 {
+    font-size: 34px;
+  }
+
+
+  .hero-content p {
+    max-width: 250px;
+
+    font-size: 11px;
+  }
+
+
+  .search-section {
+    gap: 7px;
+  }
+
+
+  .search-section input {
+    height: 46px;
+
+    padding: 0 13px;
+
+    font-size: 11px;
+  }
+
+
+  .search-section button,
+  .search-button {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+  }
+
+
+  .categories-section {
+    gap: 12px;
+  }
+
+
+  .category {
+    min-width: 68px;
+  }
+
+
+  .category-icon {
+    width: 51px;
+    height: 51px;
+  }
+
+
+  .category span {
+    font-size: 9px;
+  }
+
+
+  /* ======================================
+     SMALL PHONE HOT DEALS
+  ====================================== */
+
+  .hot-deals {
+    min-height: 175px;
+
+    border-radius: 21px;
+  }
+
+
+  .hot-deals-content {
+    width: 55%;
+
+    padding-left: 17px;
+  }
+
+
+  .hot-deals h2,
+  .hot-deals h2 span:first-child {
+    font-size: 20px;
+  }
+
+
+  .hot-deals-fire {
+    font-size: 19px;
+  }
+
+
+  .hot-deals p {
+    max-width: 130px;
+
+    font-size: 11px;
+
+    margin-bottom: 13px;
+  }
+
+
+  .hot-deals button {
+    padding: 7px 14px;
+
+    font-size: 10px;
+  }
+
+
+  .hot-deals-image {
+    right: -5px;
+
+    width: 58%;
+
+    height: 123%;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+
+  .top-header {
+    padding: 0 14px;
+  }
+
+
+  .brand-logo img {
+    width: 125px;
+  }
+
+
+  .address-selector {
+    max-width: 90%;
+  }
+
+
+  .mobile-menu-logo img {
+    width: 125px;
+  }
+
+}
+
+/* ========================================
+   DISH ACTIONS
+======================================== */
+
+.dish-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   FAVORITE BUTTON
+======================================== */
+
+.favorite-button {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #e5dfd7;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #77736d;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.favorite-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+.favorite-button:hover {
+  color: #e87528;
+  background: #fff5ed;
+  border-color: #e87528;
+}
+
+
+.favorite-button.active {
+  color: #e87528;
+  background: #fff0e6;
+  border-color: #e87528;
+}
+
+
+.favorite-button:active {
+  transform: scale(0.92);
+}
+
+
+/* ========================================
+   ADD BUTTON
+======================================== */
+
+.add-button {
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .dish-actions {
+    gap: 5px;
+  }
+
+  .favorite-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .favorite-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+}
+
+/* =========================================
+   MENU ACCOUNT
+========================================= */
+
+.menu-login {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 28px 0 0 0;
+
+    background: none;
+    border: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+
+/* ========================================
+   LOGGED-IN USER PROFILE
+======================================== */
+
+.menu-profile {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+    background: none;
+
+    /* Give it the same horizontal breathing room */
+    padding: 8px 18px;
+
+    margin-top: 4px;
+
+    cursor: pointer;
+    text-align: left;
+
+    box-sizing: border-box;
+}
+
+.menu-avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d96b2b;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.menu-profile-name {
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #333;
+}
+
+.menu-profile:hover .menu-avatar {
+    transform: scale(1.05);
+}

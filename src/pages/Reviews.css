@@ -1,0 +1,537 @@
+/* =========================================================
+   REVIEWS PAGE
+========================================================= */
+
+.reviews-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding: 30px 20px 60px;
+  color: #222;
+}
+
+.reviews-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.reviews-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.reviews-back-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #222;
+  transition: background 0.2s ease;
+}
+
+.reviews-back-button:hover {
+  background: #f0f0f0;
+}
+
+/* =========================================================
+   FOOD CARD
+========================================================= */
+
+.reviews-food-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.reviews-food-image {
+  width: 145px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.reviews-food-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.reviews-food-details h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.reviews-food-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+.reviews-food-rating strong {
+  font-size: 17px;
+  color: #222;
+}
+
+.reviews-food-rating span {
+  font-size: 13px;
+  color: #777;
+}
+
+.reviews-food-details p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   REVIEW FORM
+========================================================= */
+
+.reviews-form-section {
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.reviews-form-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.reviews-form-description {
+  font-size: 14px;
+  color: #777;
+  margin: 0 0 24px;
+}
+
+.reviews-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviews-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.reviews-form label span {
+  font-weight: 400;
+  color: #888;
+}
+
+.reviews-form input,
+.reviews-form textarea {
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 14px 15px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #222;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.reviews-form input:focus,
+.reviews-form textarea:focus {
+  border-color: #f59e0b;
+}
+
+.reviews-form textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
+}
+
+.reviews-rating-label {
+  margin-top: 10px;
+}
+
+/* =========================================================
+   STAR SELECTOR
+========================================================= */
+
+.reviews-star-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.reviews-star-button {
+  border: none;
+  background: transparent;
+  padding: 3px;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.reviews-star-button:hover {
+  transform: scale(1.12);
+}
+
+.reviews-star-button.active {
+  color: #f59e0b;
+}
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.reviews-message {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.reviews-error {
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.reviews-success {
+  color: #166534;
+  background: #f0fdf4;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.reviews-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reviews-submit-button:hover {
+  background: #e68a00;
+}
+
+.reviews-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   REVIEWS LIST
+========================================================= */
+
+.reviews-list-section {
+  margin-top: 35px;
+}
+
+.reviews-list-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.reviews-list-heading h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.reviews-list-heading span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 20px;
+  background: #fff0d5;
+  color: #b76a00;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.reviews-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 45px 20px;
+  background: #fff;
+  border-radius: 16px;
+  color: #999;
+}
+
+.reviews-empty-state h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 16px 0 8px;
+}
+
+.reviews-empty-state p {
+  max-width: 350px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviews-review-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);
+}
+
+.reviews-review-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviews-review-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0d5;
+  color: #b76a00;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.reviews-review-author {
+  flex: 1;
+  min-width: 0;
+}
+
+.reviews-review-author h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  color: #222;
+}
+
+.reviews-review-author span {
+  font-size: 12px;
+  color: #999;
+}
+
+.reviews-review-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #f59e0b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reviews-review-comment {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.reviews-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #777;
+}
+
+.reviews-spinner {
+  animation: reviews-spin 1s linear infinite;
+}
+
+@keyframes reviews-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .reviews-page {
+    padding: 20px 14px 45px;
+  }
+
+  .reviews-header {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .reviews-header h1 {
+    font-size: 21px;
+  }
+
+  .reviews-food-card {
+    gap: 14px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .reviews-food-image {
+    width: 105px;
+    height: 110px;
+    border-radius: 10px;
+  }
+
+  .reviews-food-details h2 {
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .reviews-food-rating {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .reviews-food-rating strong {
+    font-size: 15px;
+  }
+
+  .reviews-food-rating span {
+    font-size: 12px;
+  }
+
+  .reviews-food-details p {
+    font-size: 12px;
+  }
+
+  .reviews-form-section {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .reviews-form-section h2,
+  .reviews-list-heading h2 {
+    font-size: 19px;
+  }
+
+  .reviews-star-selector {
+    gap: 5px;
+  }
+
+  .reviews-star-button svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .reviews-review-card {
+    padding: 17px;
+  }
+
+  .reviews-review-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reviews-review-comment {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .reviews-food-card {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .reviews-food-image {
+    width: 90px;
+    height: 100px;
+  }
+
+  .reviews-food-details h2 {
+    font-size: 15px;
+  }
+
+  .reviews-food-details p {
+    font-size: 11px;
+  }
+
+  .reviews-review-top {
+    gap: 8px;
+  }
+
+  .reviews-review-rating {
+    font-size: 12px;
+  }
+}

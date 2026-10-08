@@ -1,0 +1,1673 @@
+/* ========================================
+   DAMMY & SPICE
+   DRINKS PAGE
+======================================== */
+
+.drinks-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f8f5ef;
+  color: #252525;
+
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.drinks-header {
+  width: 100%;
+
+  background: #ffffff;
+
+  position: relative;
+
+  z-index: 100;
+}
+
+
+.drinks-top-header {
+  position: relative;
+
+  width: 100%;
+  height: 108px;
+
+  padding: 0 42px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ========================================
+   HEADER BUTTONS
+======================================== */
+
+.drinks-header-button {
+  position: relative;
+
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #292929;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.drinks-header-button:hover {
+  color: #e45b1c;
+
+  transform: scale(1.05);
+}
+
+
+.drinks-header-button svg {
+  width: 27px;
+  height: 27px;
+
+  stroke-width: 1.8;
+}
+
+
+/* ========================================
+   DESKTOP HAMBURGER
+======================================== */
+
+.drinks-menu-button {
+  display: flex;
+}
+
+
+/* ========================================
+   MOBILE BACK
+======================================== */
+
+.drinks-back-button {
+  display: none;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.drinks-logo {
+  position: absolute;
+
+  left: 50%;
+  top: 62%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.drinks-logo img {
+  display: block;
+
+  width: 120px;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* ========================================
+   CART
+======================================== */
+
+.drinks-cart-button {
+  position: relative;
+}
+
+
+.drinks-cart-count {
+  position: absolute;
+
+  top: 0;
+  right: -1px;
+
+  min-width: 21px;
+  height: 21px;
+
+  padding: 0 5px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #e87522;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.drinks-content {
+  width: calc(100% - 32px);
+
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  padding: 20px 0 80px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.drinks-introduction {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  text-align: center;
+}
+
+
+.drinks-introduction div {
+  width: 38px;
+  height: 2px;
+
+  background: #e4cdb5;
+
+  border-radius: 2px;
+}
+
+
+.drinks-introduction h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  color: #292929;
+}
+
+
+/* ========================================
+   COUNTRY FILTER ROW
+======================================== */
+
+.drinks-filter-row {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* ========================================
+   COUNTRY SCROLL
+======================================== */
+
+.drinks-country-scroll {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+
+.drinks-country-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ========================================
+   COUNTRY BUTTON
+======================================== */
+
+.drinks-country-button {
+  flex: 0 0 auto;
+
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border: 1px solid #e5e0d8;
+
+  border-radius: 22px;
+
+  background: #faf8f4;
+
+  color: #555555;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.drinks-country-button:hover {
+  border-color: #e45b1c;
+
+  color: #e45b1c;
+}
+
+
+.drinks-country-button.active {
+  border-color: #e45b1c;
+
+  background: #e45b1c;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   SORT BUTTON
+======================================== */
+
+.drinks-sort-button {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #e5e0d8;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #292929;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.drinks-sort-button:hover,
+.drinks-sort-button.active {
+  border-color: #e45b1c;
+
+  color: #e45b1c;
+
+  background: #fff8f3;
+}
+
+
+.drinks-sort-button svg {
+  width: 23px;
+  height: 23px;
+
+  stroke-width: 1.8;
+}
+
+
+/* ========================================
+   SORT PANEL
+======================================== */
+
+.drinks-sort-panel {
+  position: relative;
+
+  width: 100%;
+
+  margin: 8px 0 20px;
+
+  padding: 18px 14px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ========================================
+   SORT HEADER
+======================================== */
+
+.drinks-sort-header {
+  width: 100%;
+
+  min-height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 0 0 5px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+.drinks-sort-header h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  color: #292929;
+}
+
+
+/* ========================================
+   SORT CLOSE BUTTON
+======================================== */
+
+.drinks-sort-close {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  flex: 0 0 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #999999;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.drinks-sort-close:hover {
+  color: #e45b1c;
+
+  background: #fff8f3;
+}
+
+
+.drinks-sort-close svg {
+  width: 20px;
+  height: 20px;
+
+  stroke-width: 1.8;
+}
+
+
+/* ========================================
+   SORT OPTIONS
+======================================== */
+
+.drinks-sort-option {
+  width: 100%;
+
+  min-height: 56px;
+
+  flex: none;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #faf9f6;
+
+  color: #555555;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.drinks-sort-option:hover,
+.drinks-sort-option.selected {
+  background: #f8e9dd;
+
+  color: #e45b1c;
+}
+
+
+/* ========================================
+   DRINK LIST
+======================================== */
+
+.drinks-list {
+  width: 100%;
+
+  margin-top: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ========================================
+   DRINK CARD
+======================================== */
+
+.drink-card {
+  width: 100%;
+
+  min-height: 170px;
+
+  padding: 14px 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  gap: 18px;
+
+  border-bottom: 1px solid #ebe7e1;
+
+  background: transparent;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.drink-image-wrapper {
+  width: 190px;
+  height: 150px;
+
+  flex: 0 0 190px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #eee7dc;
+}
+
+
+.drink-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ========================================
+   INFORMATION
+======================================== */
+
+.drink-information {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ========================================
+   NAME + HEART
+======================================== */
+
+.drink-name-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+
+.drink-name-row h2 {
+  flex: 1;
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+
+  color: #252525;
+}
+
+
+/* ========================================
+   HEART
+======================================== */
+
+.drink-heart {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  cursor: pointer;
+}
+
+
+.drink-heart svg {
+  width: 23px;
+  height: 23px;
+
+  stroke-width: 1.6;
+}
+
+
+.drink-heart.active {
+  color: #e45b1c;
+}
+
+
+/* ========================================
+   COUNTRY
+======================================== */
+
+.drink-country {
+  margin-top: 5px;
+
+  color: #e45b1c;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.drink-description {
+  max-width: 330px;
+
+  margin: 8px 0 0;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+
+/* ========================================
+   BOTTOM
+======================================== */
+
+.drink-bottom-row {
+  margin-top: auto;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+/* ========================================
+   PRICE + RATING
+======================================== */
+
+.drink-price-rating {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.drink-price-rating strong {
+  color: #202020;
+
+  font-size: 17px;
+}
+
+
+.drink-rating {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  color: #777777;
+
+  font-size: 11px;
+}
+
+
+.drink-rating svg {
+  width: 14px;
+  height: 14px;
+
+  color: #e45b1c;
+}
+
+
+/* ========================================
+   ADD BUTTON
+======================================== */
+
+.drink-add-button {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e45b1c;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.drink-add-button:hover {
+  transform: scale(1.07);
+
+  background: #cf4e14;
+}
+
+
+.drink-add-button svg {
+  width: 21px;
+  height: 21px;
+
+  stroke-width: 2;
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.drinks-empty-state {
+  width: 100%;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+.drinks-empty-state h2 {
+  margin: 0 0 8px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  color: #292929;
+}
+
+
+.drinks-empty-state p {
+  margin: 0;
+
+  color: #888888;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   SIDE MENU
+======================================== */
+
+.drinks-side-menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 199;
+}
+
+
+.drinks-side-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: min(330px, 82vw);
+
+  height: 100vh;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.12);
+
+  z-index: 200;
+
+  animation:
+    drinkMenuOpen
+    0.25s ease
+    forwards;
+}
+
+
+@keyframes drinkMenuOpen {
+
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+.drinks-side-menu-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+
+.drinks-side-menu-logo {
+  width: 125px;
+
+  height: auto;
+}
+
+
+.drinks-close-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.drinks-close-button svg {
+  width: 29px;
+  height: 29px;
+}
+
+
+/* ========================================
+   SIDE NAVIGATION
+======================================== */
+
+.drinks-side-navigation {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.drinks-side-navigation button {
+  width: 100%;
+
+  min-height: 56px;
+
+  padding: 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: transparent;
+
+  color: #292929;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.drinks-side-navigation button:hover {
+  background: #f8f5ef;
+
+  color: #e45b1c;
+}
+
+
+.drinks-side-navigation svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* ========================================
+   MOBILE NAV
+======================================== */
+
+.drinks-mobile-navigation {
+  display: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+  .drinks-content {
+    max-width: 700px;
+
+    padding-top: 18px;
+  }
+
+
+  .drink-image-wrapper {
+    width: 175px;
+
+    height: 140px;
+
+    flex-basis: 175px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .drinks-sort-panel {
+    margin-top: -3px;
+
+    padding: 14px 10px 10px;
+
+    gap: 7px;
+
+    border: none;
+
+    border-radius: 15px;
+  }
+
+
+  .drinks-sort-header {
+    min-height: 42px;
+
+    margin-bottom: 4px;
+  }
+
+
+  .drinks-sort-header h2 {
+    font-size: 23px;
+
+    white-space: nowrap;
+  }
+
+
+  .drinks-sort-close {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    flex: 0 0 40px;
+  }
+
+
+  .drinks-sort-option {
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+  }
+
+
+  /* HEADER */
+
+  .drinks-top-header {
+    height: 100px;
+
+    padding: 0 24px;
+  }
+
+
+  .drinks-menu-button {
+    display: none;
+  }
+
+
+  .drinks-back-button {
+    display: flex;
+  }
+
+
+  .drinks-logo {
+    top: 66%;
+  }
+
+
+  .drinks-logo img {
+    width: 118px;
+  }
+
+
+  .drinks-cart-button {
+    width: 44px;
+
+    height: 44px;
+
+    flex-basis: 44px;
+  }
+
+
+  .drinks-cart-button svg {
+    width: 27px;
+
+    height: 27px;
+  }
+
+
+  /* CONTENT */
+
+  .drinks-content {
+    width: calc(100% - 28px);
+
+    padding: 18px 0 100px;
+  }
+
+
+  /* TITLE */
+
+  .drinks-introduction {
+    gap: 8px;
+  }
+
+
+  .drinks-introduction div {
+    width: 27px;
+  }
+
+
+  .drinks-introduction h1 {
+    font-size: 29px;
+  }
+
+
+  /* COUNTRY FILTER */
+
+  .drinks-filter-row {
+    margin-top: 23px;
+
+    gap: 8px;
+  }
+
+
+  .drinks-country-button {
+    min-height: 39px;
+
+    padding: 0 17px;
+
+    font-size: 11px;
+  }
+
+
+  .drinks-sort-button {
+    width: 46px;
+
+    height: 46px;
+
+    flex-basis: 46px;
+
+    border-radius: 12px;
+  }
+
+
+  /* LIST */
+
+  .drinks-list {
+    margin-top: 8px;
+  }
+
+
+  /* CARD */
+
+  .drink-card {
+    min-height: 151px;
+
+    padding: 12px 0;
+
+    gap: 12px;
+  }
+
+
+  /* IMAGE */
+
+  .drink-image-wrapper {
+    width: 145px;
+
+    height: 132px;
+
+    flex: 0 0 145px;
+
+    border-radius: 11px;
+  }
+
+
+  /* NAME */
+
+  .drink-name-row h2 {
+    font-size: 16px;
+  }
+
+
+  .drink-heart {
+    width: 26px;
+
+    height: 26px;
+
+    flex-basis: 26px;
+  }
+
+
+  .drink-heart svg {
+    width: 20px;
+
+    height: 20px;
+  }
+
+
+  /* COUNTRY */
+
+  .drink-country {
+    margin-top: 4px;
+
+    font-size: 10px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .drink-description {
+    margin-top: 6px;
+
+    font-size: 9.5px;
+
+    line-height: 1.4;
+  }
+
+
+  /* PRICE */
+
+  .drink-price-rating {
+    gap: 8px;
+  }
+
+
+  .drink-price-rating strong {
+    font-size: 14px;
+  }
+
+
+  .drink-rating {
+    font-size: 9px;
+  }
+
+
+  .drink-rating svg {
+    width: 12px;
+
+    height: 12px;
+  }
+
+
+  /* ADD */
+
+  .drink-add-button {
+    width: 32px;
+
+    height: 32px;
+
+    flex-basis: 32px;
+  }
+
+
+  .drink-add-button svg {
+    width: 19px;
+
+    height: 19px;
+  }
+
+
+  /* HIDE SIDE MENU */
+
+  .drinks-side-menu,
+  .drinks-side-menu-overlay {
+    display: none;
+  }
+
+
+  /* BOTTOM NAV */
+
+  .drinks-mobile-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    padding: 7px 8px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: space-around;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e8e4de;
+
+    box-shadow:
+      0 -4px 18px rgba(0, 0, 0, 0.06);
+
+    z-index: 300;
+  }
+
+
+  .drinks-mobile-nav-item {
+    flex: 1;
+
+    max-width: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777777;
+
+    cursor: pointer;
+  }
+
+
+  .drinks-mobile-nav-item svg {
+    width: 20px;
+
+    height: 20px;
+
+    stroke-width: 1.7;
+  }
+
+
+  .drinks-mobile-nav-item span {
+    font-size: 8.5px;
+  }
+
+
+  .drinks-mobile-nav-item.active {
+    color: #e45b1c;
+  }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 390px) {
+
+  .drinks-top-header {
+    height: 94px;
+
+    padding: 0 18px;
+  }
+
+
+  .drinks-logo {
+    top: 66%;
+  }
+
+
+  .drinks-logo img {
+    width: 108px;
+  }
+
+
+  .drinks-back-button,
+  .drinks-cart-button {
+    width: 40px;
+
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+
+  .drinks-back-button svg,
+  .drinks-cart-button svg {
+    width: 24px;
+
+    height: 24px;
+  }
+
+
+  .drinks-content {
+    width: calc(100% - 20px);
+  }
+
+
+  .drinks-introduction h1 {
+    font-size: 26px;
+  }
+
+
+  .drinks-introduction div {
+    width: 22px;
+  }
+
+
+  .drink-card {
+    gap: 9px;
+
+    min-height: 125px;
+  }
+
+
+  .drink-image-wrapper {
+    width: 115px;
+
+    height: 108px;
+
+    flex-basis: 115px;
+  }
+
+
+  .drink-name-row h2 {
+    font-size: 14px;
+  }
+
+
+  .drink-country {
+    font-size: 9px;
+  }
+
+
+  .drink-description {
+    font-size: 8.5px;
+  }
+
+
+  .drink-price-rating strong {
+    font-size: 12px;
+  }
+
+
+  .drink-add-button {
+    width: 29px;
+
+    height: 29px;
+
+    flex-basis: 29px;
+  }
+
+
+  .drink-add-button svg {
+    width: 17px;
+
+    height: 17px;
+  }
+
+}
+
+/* =====================================================
+   FAVORITE BUTTON
+===================================================== */
+
+.favorite-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #4b4742;
+
+  cursor: pointer;
+
+  border-radius: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  box-shadow: none;
+
+  transition: color 0.2s ease;
+}
+
+
+/* HEART ICON */
+
+.favorite-button svg {
+  width: 28px;
+  height: 28px;
+
+  stroke-width: 1.8;
+
+  fill: none;
+
+  color: #4b4742;
+
+  transition:
+    color 0.2s ease,
+    fill 0.2s ease;
+}
+
+
+/* HOVER */
+
+.favorite-button:hover {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  color: #e87528;
+}
+
+
+.favorite-button:hover svg {
+  color: #e87528;
+}
+
+
+/* WHEN SELECTED */
+
+.favorite-button.active,
+.favorite-button.favorited {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* SELECTED HEART */
+
+.favorite-button.active svg,
+.favorite-button.favorited svg {
+  color: #e87528;
+  fill: #e87528;
+}
+
+
+/* CLICK / FOCUS */
+
+.favorite-button:active,
+.favorite-button:focus,
+.favorite-button:focus-visible {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.favorite-highlight {
+  outline: 3px solid #e87528;
+  border-radius: 12px;
+  transition: outline 0.3s ease;
+}
+
+.drink-rating {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+}

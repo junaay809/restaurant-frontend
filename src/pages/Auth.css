@@ -1,0 +1,332 @@
+/* =========================================
+   AUTH PAGE
+========================================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: #f8f6f2;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 470px;
+    justify-content: flex-start;
+    background: #ffffff;
+
+    padding: 45px 42px;
+    
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.auth-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.auth-logo img{
+    display: block;
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auth-heading {
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 25px;
+}
+
+.auth-heading h1 {
+    margin: 0 0 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    color: #242424;
+}
+
+.auth-heading p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.auth-error {
+    background: #fff1f1;
+
+    color: #b42318;
+
+    border: 1px solid #f3c1c1;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.auth-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   FIELD
+========================================= */
+
+.auth-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.auth-field label {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #333;
+}
+
+.auth-field input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: #fff;
+
+    transition: 0.2s ease;
+}
+
+.auth-field input:focus {
+    border-color: #d96b2b;
+
+    box-shadow:
+        0 0 0 3px rgba(217, 107, 43, 0.08);
+}
+
+.auth-field input::placeholder {
+    color: #aaa;
+}
+
+
+/* =========================================
+   FORGOT PASSWORD
+========================================= */
+
+.forgot-password {
+    text-align: right;
+
+    margin-top: -8px;
+}
+
+.forgot-password button {
+    border: none;
+
+    background: none;
+
+    color: #d96b2b;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    padding: 0;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.auth-submit {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    background: #d96b2b;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.auth-submit:hover {
+    background: #bd5820;
+}
+
+.auth-submit:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   SWITCH
+========================================= */
+
+.auth-switch {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+.auth-switch button {
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    color: #d96b2b;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .auth-page {
+        padding: 20px 15px;
+    }
+
+    .auth-container {
+        padding: 35px 22px;
+
+        border-radius: 14px;
+    }
+
+    .auth-heading h1 {
+        font-size: 27px;
+    }
+
+    .auth-logo {
+        margin-bottom: 28px;
+    }
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-wrapper input {
+    width: 100%;
+    padding-right: 48px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #777;
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: #333;
+}
+
+.password-toggle:focus {
+    outline: none;
+}

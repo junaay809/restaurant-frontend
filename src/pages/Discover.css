@@ -1,0 +1,2366 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* =====================================================
+   DISCOVER PAGE
+===================================================== */
+
+.discover-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #fffaf5;
+  color: #171717;
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.discover-decoration {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.discover-decoration-one {
+  width: 340px;
+  height: 340px;
+  top: -170px;
+  right: -120px;
+  background: rgba(245, 126, 32, 0.12);
+}
+
+.discover-decoration-two {
+  width: 190px;
+  height: 190px;
+  bottom: 70px;
+  left: -100px;
+  background: rgba(245, 126, 32, 0.08);
+}
+
+.discover-decoration-three {
+  width: 90px;
+  height: 90px;
+  top: 35%;
+  right: -45px;
+  border: 1px solid rgba(245, 126, 32, 0.2);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.discover-header {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  background: rgba(255, 250, 245, 0.92);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  backdrop-filter: blur(12px);
+}
+
+.discover-header h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.discover-header-spacer {
+  width: 40px;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.discover-back-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #1b1b1b;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.discover-back-button:hover {
+  transform: translateX(-2px);
+  background: #f47c20;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.discover-intro {
+  position: relative;
+  z-index: 2;
+
+  width: min(620px, calc(100% - 40px));
+
+  min-height: calc(100vh - 74px);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 45px 0 70px;
+}
+
+
+/* =====================================================
+   ORANGE ICON AREA
+===================================================== */
+
+.discover-icon-area {
+  position: relative;
+
+  width: 155px;
+  height: 155px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+}
+
+.discover-icon-circle-back {
+  position: absolute;
+
+  width: 142px;
+  height: 142px;
+
+  border-radius: 50%;
+
+  background: #f8a15e;
+
+  opacity: 0.18;
+
+  transform: rotate(-10deg);
+}
+
+.discover-icon-circle {
+  position: relative;
+  z-index: 2;
+
+  width: 108px;
+  height: 108px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f47c20;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 18px 40px rgba(244, 124, 32, 0.28);
+}
+
+.discover-floating-dot {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: #f47c20;
+}
+
+.discover-floating-dot.dot-one {
+  width: 11px;
+  height: 11px;
+
+  top: 4px;
+  right: 12px;
+}
+
+.discover-floating-dot.dot-two {
+  width: 7px;
+  height: 7px;
+
+  bottom: 15px;
+  left: 13px;
+
+  opacity: 0.65;
+}
+
+.discover-floating-dot.dot-three {
+  width: 5px;
+  height: 5px;
+
+  top: 38px;
+  left: 4px;
+
+  opacity: 0.5;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.discover-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #f47c20;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+
+/* =====================================================
+   INTRO HEADING
+===================================================== */
+
+.discover-intro h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(42px, 8vw, 68px);
+
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+
+  color: #161616;
+}
+
+
+/* =====================================================
+   INTRO TEXT
+===================================================== */
+
+.discover-intro > p {
+  margin: 25px 0 0;
+
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   INTRO NOTE
+===================================================== */
+
+.discover-intro-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 22px;
+
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  background: #fff0e3;
+
+  color: #d96815;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.discover-intro-note svg {
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.discover-primary-button {
+  width: min(100%, 340px);
+
+  min-height: 54px;
+
+  margin-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #f47c20;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 13px 28px rgba(244, 124, 32, 0.23);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.discover-primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #e96f14;
+
+  box-shadow:
+    0 17px 32px rgba(244, 124, 32, 0.28);
+}
+
+.discover-primary-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.discover-primary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+.discover-time {
+  margin-top: 13px;
+
+  color: #999;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   QUESTION PAGE
+===================================================== */
+
+.discover-question-page {
+  position: relative;
+  z-index: 2;
+
+  width: min(720px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 45px 0 70px;
+}
+
+
+/* =====================================================
+   QUESTION TOP
+===================================================== */
+
+.discover-question-top {
+  margin-bottom: 34px;
+}
+
+.discover-question-number {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: #f47c20;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.discover-progress-bar {
+  width: 100%;
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #f0e5db;
+}
+
+.discover-progress-bar span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #f47c20;
+
+  transition: width 0.35s ease;
+}
+
+
+/* =====================================================
+   QUESTION INTRO
+===================================================== */
+
+.discover-question-intro {
+  position: relative;
+
+  padding: 8px 0 25px;
+}
+
+.discover-question-spark {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 12px;
+
+  background: #fff0e3;
+
+  color: #f47c20;
+}
+
+.discover-question-intro h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(34px, 6vw, 50px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+.discover-question-intro p {
+  max-width: 590px;
+
+  margin: 14px 0 0;
+
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   PROGRESS NUMBER
+===================================================== */
+
+.discover-progress {
+  min-width: 40px;
+
+  text-align: right;
+
+  color: #f47c20;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.discover-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 10px;
+}
+
+.discover-option {
+  position: relative;
+
+  min-height: 104px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border: 1.5px solid #eee4da;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.discover-option:hover {
+  transform: translateY(-2px);
+
+  border-color: #f5b27d;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.discover-option.selected {
+  border-color: #f47c20;
+
+  background: #fff7f0;
+
+  box-shadow:
+    0 10px 26px rgba(244, 124, 32, 0.11);
+}
+
+
+/* =====================================================
+   OPTION ICON
+===================================================== */
+
+.discover-option-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #fff0e3;
+
+  color: #f47c20;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.discover-option.selected
+.discover-option-icon {
+  background: #f47c20;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   OPTION TEXT
+===================================================== */
+
+.discover-option-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.discover-option-content strong {
+  color: #202020;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.discover-option-content span {
+  color: #929292;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   OPTION RADIO
+===================================================== */
+
+.discover-option-radio {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid #d9d1ca;
+
+  border-radius: 50%;
+}
+
+.discover-option-radio span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  transition:
+    background 0.2s ease;
+}
+
+.discover-option.selected
+.discover-option-radio {
+  border-color: #f47c20;
+}
+
+.discover-option.selected
+.discover-option-radio span {
+  background: #f47c20;
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.discover-next-button {
+  margin-top: 25px;
+  margin-left: auto;
+}
+
+
+/* =====================================================
+   RESULT PAGE
+===================================================== */
+
+.discover-result {
+  position: relative;
+  z-index: 2;
+
+  width: min(650px, calc(100% - 40px));
+
+  min-height: calc(100vh - 74px);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 55px 0 70px;
+}
+
+
+/* =====================================================
+   RESULT ORBIT
+===================================================== */
+
+.discover-result-orbit {
+  width: 108px;
+  height: 108px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(244, 124, 32, 0.18) 0%,
+      rgba(244, 124, 32, 0.07) 50%,
+      transparent 51%
+    );
+
+  box-shadow:
+    0 0 0 10px rgba(244, 124, 32, 0.04);
+}
+
+.discover-result-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f47c20;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 15px 30px rgba(244, 124, 32, 0.25);
+}
+
+
+/* =====================================================
+   RESULT HEADING
+===================================================== */
+
+.discover-result h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 7vw, 58px);
+
+  line-height: 1.04;
+
+  letter-spacing: -2px;
+}
+
+.discover-result h3 {
+  margin: 26px 0 0;
+
+  color: #222;
+
+  font-size: 21px;
+  font-weight: 750;
+}
+
+
+/* =====================================================
+   RESULT HIGHLIGHT
+===================================================== */
+
+.discover-result-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: 4px;
+
+  padding: 11px 20px;
+
+  border-radius: 30px;
+
+  background: #fff0e3;
+}
+
+.discover-result-highlight span {
+  color: #d66a17;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.discover-result-highlight strong {
+  color: #f47c20;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   RESULT DESCRIPTION
+===================================================== */
+
+.discover-result-description {
+  max-width: 530px;
+
+  margin: 12px auto 0;
+
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   RESULT CARD
+===================================================== */
+
+.discover-result-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 27px;
+
+  padding: 18px;
+
+  border: 1px solid #f0e3d8;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.discover-result-card-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #fff0e3;
+
+  color: #f47c20;
+}
+
+.discover-result-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.discover-result-card strong {
+  color: #202020;
+
+  font-size: 14px;
+}
+
+.discover-result-card span {
+  color: #8b8b8b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+===================================================== */
+
+.discover-secondary-button {
+  margin-top: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #f47c20;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.discover-secondary-button:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .discover-header {
+    height: 68px;
+    padding: 0 17px;
+  }
+
+  .discover-intro {
+    width: min(560px, calc(100% - 34px));
+
+    min-height: calc(100vh - 68px);
+
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
+
+  .discover-icon-area {
+    width: 135px;
+    height: 135px;
+  }
+
+  .discover-icon-circle-back {
+    width: 125px;
+    height: 125px;
+  }
+
+  .discover-icon-circle {
+    width: 94px;
+    height: 94px;
+  }
+
+  .discover-intro h2 {
+    font-size: 48px;
+  }
+
+  .discover-question-page {
+    width: min(600px, calc(100% - 34px));
+    padding-top: 32px;
+  }
+
+  .discover-result {
+    width: min(600px, calc(100% - 34px));
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 560px) {
+
+  .discover-decoration-one {
+    width: 250px;
+    height: 250px;
+
+    top: -125px;
+    right: -110px;
+  }
+
+  .discover-decoration-two {
+    width: 145px;
+    height: 145px;
+
+    bottom: 100px;
+    left: -80px;
+  }
+
+  .discover-header h1 {
+    font-size: 20px;
+  }
+
+  .discover-back-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .discover-intro {
+    width: calc(100% - 34px);
+
+    padding-top: 25px;
+    padding-bottom: 45px;
+  }
+
+  .discover-icon-area {
+    width: 125px;
+    height: 125px;
+
+    margin-bottom: 23px;
+  }
+
+  .discover-icon-circle-back {
+    width: 116px;
+    height: 116px;
+  }
+
+  .discover-icon-circle {
+    width: 88px;
+    height: 88px;
+  }
+
+  .discover-icon-circle svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .discover-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .discover-intro h2 {
+    font-size: 43px;
+    letter-spacing: -1.8px;
+  }
+
+  .discover-intro > p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .discover-intro-note {
+    margin-top: 18px;
+  }
+
+  .discover-primary-button {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* QUESTION */
+
+  .discover-question-page {
+    width: calc(100% - 34px);
+
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
+
+  .discover-question-top {
+    margin-bottom: 27px;
+  }
+
+  .discover-question-intro h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .discover-question-intro p {
+    font-size: 14px;
+  }
+
+  .discover-options {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .discover-option {
+    min-height: 88px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .discover-option-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+  }
+
+  .discover-option-content strong {
+    font-size: 14px;
+  }
+
+  .discover-option-content span {
+    font-size: 11px;
+  }
+
+  .discover-next-button {
+    margin-top: 19px;
+  }
+
+  /* RESULT */
+
+  .discover-result {
+    width: calc(100% - 34px);
+
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .discover-result-orbit {
+    width: 95px;
+    height: 95px;
+  }
+
+  .discover-result-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .discover-result h2 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .discover-result h3 {
+    font-size: 19px;
+  }
+
+  .discover-result-description {
+    font-size: 14px;
+  }
+
+  .discover-result-card {
+    padding: 15px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .discover-intro h2 {
+    font-size: 38px;
+  }
+
+  .discover-question-intro h2 {
+    font-size: 30px;
+  }
+
+  .discover-option {
+    padding: 12px;
+  }
+
+  .discover-option-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .discover-option-content span {
+    font-size: 10.5px;
+  }
+
+  .discover-result h2 {
+    font-size: 35px;
+  }
+
+}
+
+/* =====================================================
+   DISCOVER PAGE
+===================================================== */
+
+.discover-page {
+  min-height: 100vh;
+  background: #fffaf5;
+  color: #181411;
+  position: relative;
+  overflow: hidden;
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.discover-decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.discover-decoration-one {
+  width: 330px;
+  height: 330px;
+  background: rgba(243, 107, 33, 0.08);
+  top: -170px;
+  right: -110px;
+}
+
+.discover-decoration-two {
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(243, 107, 33, 0.18);
+  bottom: -80px;
+  left: -75px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.discover-header {
+  height: 74px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  padding: 0 22px;
+  position: relative;
+  z-index: 5;
+}
+
+.discover-header h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.discover-header-spacer {
+  width: 44px;
+}
+
+.discover-back-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #181411;
+  cursor: pointer;
+  box-shadow: 0 7px 22px rgba(33, 20, 12, 0.08);
+  transition: 0.2s ease;
+}
+
+.discover-back-button:hover {
+  transform: translateX(-2px);
+}
+
+.discover-back-button:active {
+  transform: scale(0.94);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.discover-intro {
+  min-height: calc(100vh - 74px);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 70px 24px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.discover-intro-orbit {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border: 1px solid rgba(243, 107, 33, 0.14);
+  border-radius: 50%;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.discover-intro-orbit::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: #f36b21;
+  border-radius: 50%;
+  top: 20px;
+  right: 32px;
+}
+
+.discover-intro-orbit::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #181411;
+  border-radius: 50%;
+  bottom: 28px;
+  left: 28px;
+}
+
+.discover-icon-wrapper {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #f36b21;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 18px 35px rgba(243, 107, 33, 0.25),
+    0 0 0 13px rgba(243, 107, 33, 0.08);
+  margin-bottom: 32px;
+}
+
+.discover-eyebrow {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #f36b21;
+  margin-bottom: 14px;
+}
+
+.discover-intro h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(46px, 8vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -2.8px;
+  font-weight: 700;
+}
+
+.discover-intro p {
+  max-width: 510px;
+  margin: 25px auto 31px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #756c65;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.discover-primary-button {
+  min-height: 54px;
+  padding: 0 23px;
+  border: none;
+  border-radius: 999px;
+  background: #f36b21;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(243, 107, 33, 0.22);
+  transition: 0.2s ease;
+}
+
+.discover-primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(243, 107, 33, 0.27);
+}
+
+.discover-primary-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.discover-primary-button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.discover-time {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #a09791;
+}
+
+
+/* =====================================================
+   CATEGORY SELECTION PAGE
+===================================================== */
+
+.discover-category-page {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 45px 24px 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.discover-category-heading {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.discover-category-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: rgba(243, 107, 33, 0.11);
+  color: #f36b21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-category-heading h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 57px);
+  line-height: 1.04;
+  letter-spacing: -1.8px;
+}
+
+.discover-category-heading p {
+  max-width: 540px;
+  margin: 18px auto 0;
+  color: #756c65;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CATEGORY GRID
+===================================================== */
+
+.discover-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.discover-category-card {
+  min-height: 245px;
+  padding: 25px;
+  border: 1px solid #eee5de;
+  border-radius: 25px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.discover-category-card::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(243, 107, 33, 0.055);
+  right: -50px;
+  bottom: -55px;
+  transition: 0.25s ease;
+}
+
+.discover-category-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(243, 107, 33, 0.25);
+  box-shadow: 0 18px 45px rgba(40, 25, 15, 0.08);
+}
+
+.discover-category-card:hover::after {
+  transform: scale(1.25);
+  background: rgba(243, 107, 33, 0.09);
+}
+
+.discover-category-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.discover-category-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #fff1e8;
+  color: #f36b21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-category-card-arrow {
+  color: #a79d96;
+  transition: 0.2s ease;
+}
+
+.discover-category-card:hover
+.discover-category-card-arrow {
+  color: #f36b21;
+  transform: translateX(3px);
+}
+
+.discover-category-card-eyebrow {
+  display: block;
+  color: #f36b21;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  margin-bottom: 9px;
+  position: relative;
+  z-index: 1;
+}
+
+.discover-category-card strong {
+  display: block;
+  max-width: 320px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  line-height: 1.18;
+  color: #181411;
+  position: relative;
+  z-index: 1;
+}
+
+.discover-category-card p {
+  max-width: 390px;
+  margin: 10px 0 0;
+  color: #827870;
+  font-size: 12px;
+  line-height: 1.65;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =====================================================
+   QUESTION PAGE
+===================================================== */
+
+.discover-question-page {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 22px 24px 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.discover-progress-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: #eee5de;
+  overflow: hidden;
+  margin-bottom: 38px;
+}
+
+.discover-progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #f36b21;
+  transition: width 0.35s ease;
+}
+
+.discover-progress {
+  justify-self: end;
+  min-width: 44px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #f36b21;
+  background: #fff1e8;
+  padding: 8px 9px;
+  border-radius: 999px;
+}
+
+.discover-question-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.discover-question-category-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff1e8;
+  color: #f36b21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-question-category span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: #f36b21;
+}
+
+.discover-question-intro {
+  margin-bottom: 31px;
+}
+
+.discover-question-number {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  font-weight: 800;
+  color: #a19891;
+  margin-bottom: 10px;
+}
+
+.discover-question-intro h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 6vw, 48px);
+  line-height: 1.06;
+  letter-spacing: -1.5px;
+}
+
+.discover-question-intro p {
+  margin: 14px 0 0;
+  max-width: 520px;
+  color: #817870;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.discover-options {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.discover-option {
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 14px 10px 10px;
+  border: 1px solid #ece4dd;
+  border-radius: 18px;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 48px 1fr 28px;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.discover-option:hover {
+  border-color: rgba(243, 107, 33, 0.35);
+  transform: translateX(2px);
+}
+
+.discover-option.selected {
+  background: #fff4ec;
+  border-color: #f36b21;
+  box-shadow: 0 8px 22px rgba(243, 107, 33, 0.08);
+}
+
+.discover-option-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #f8f3ef;
+  color: #5f554e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-option.selected
+.discover-option-icon {
+  background: #f36b21;
+  color: #ffffff;
+}
+
+.discover-option > span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #27211d;
+}
+
+.discover-option-radio {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1.5px solid #d5ccc5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-option-radio span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: transparent;
+  transition: 0.2s ease;
+}
+
+.discover-option.selected
+.discover-option-radio {
+  border-color: #f36b21;
+}
+
+.discover-option.selected
+.discover-option-radio span {
+  background: #f36b21;
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.discover-next-button {
+  width: 100%;
+  margin-top: 24px;
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.discover-result {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 65px 24px 80px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.discover-result-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: #f36b21;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 16px 32px rgba(243, 107, 33, 0.22),
+    0 0 0 12px rgba(243, 107, 33, 0.08);
+}
+
+.discover-result h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(39px, 7vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -2px;
+}
+
+.discover-result-description {
+  max-width: 500px;
+  margin: 18px auto 28px;
+  color: #776e67;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.discover-result-card {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 22px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #eee5de;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.discover-result-card-icon {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #fff1e8;
+  color: #f36b21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-result-card strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.discover-result-card span {
+  display: block;
+  color: #837a73;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.discover-secondary-button {
+  border: none;
+  background: transparent;
+  color: #5f554e;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 17px;
+  cursor: pointer;
+}
+
+.discover-secondary-button:hover {
+  color: #f36b21;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 760px) {
+
+  .discover-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discover-category-card {
+    min-height: 210px;
+  }
+
+  .discover-category-page {
+    padding-top: 30px;
+  }
+
+  .discover-category-heading {
+    margin-bottom: 30px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+  .discover-header {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .discover-header h1 {
+    font-size: 20px;
+  }
+
+  .discover-back-button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  /* INTRO */
+
+  .discover-intro {
+    min-height: calc(100vh - 68px);
+    padding: 58px 20px 70px;
+  }
+
+  .discover-intro-orbit {
+    width: 235px;
+    height: 235px;
+    top: 32px;
+  }
+
+  .discover-icon-wrapper {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 27px;
+  }
+
+  .discover-intro h2 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .discover-intro p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 20px;
+  }
+
+  .discover-primary-button {
+    min-height: 51px;
+    font-size: 13px;
+    padding: 0 20px;
+  }
+
+
+  /* CATEGORY */
+
+  .discover-category-page {
+    padding: 27px 16px 60px;
+  }
+
+  .discover-category-heading {
+    margin-bottom: 25px;
+  }
+
+  .discover-category-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+  }
+
+  .discover-category-heading h2 {
+    font-size: 39px;
+    letter-spacing: -1.4px;
+  }
+
+  .discover-category-heading p {
+    font-size: 13px;
+    line-height: 1.65;
+    margin-top: 15px;
+  }
+
+  .discover-category-grid {
+    gap: 11px;
+  }
+
+  .discover-category-card {
+    min-height: 0;
+    padding: 19px;
+    border-radius: 20px;
+  }
+
+  .discover-category-card-top {
+    margin-bottom: 22px;
+  }
+
+  .discover-category-card-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+  }
+
+  .discover-category-card strong {
+    font-size: 20px;
+  }
+
+  .discover-category-card p {
+    font-size: 11px;
+  }
+
+
+  /* QUESTIONS */
+
+  .discover-question-page {
+    padding: 17px 16px 55px;
+  }
+
+  .discover-progress-bar {
+    margin-bottom: 28px;
+  }
+
+  .discover-question-category {
+    margin-bottom: 17px;
+  }
+
+  .discover-question-intro {
+    margin-bottom: 25px;
+  }
+
+  .discover-question-intro h2 {
+    font-size: 35px;
+    letter-spacing: -1.2px;
+  }
+
+  .discover-question-intro p {
+    font-size: 13px;
+  }
+
+  .discover-option {
+    min-height: 64px;
+    grid-template-columns: 44px 1fr 25px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+
+  .discover-option-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .discover-option > span {
+    font-size: 13px;
+  }
+
+  .discover-option-radio {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  /* RESULT */
+
+  .discover-result {
+    padding: 52px 18px 60px;
+  }
+
+  .discover-result-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .discover-result h2 {
+    font-size: 40px;
+    letter-spacing: -1.4px;
+  }
+
+  .discover-result-description {
+    font-size: 13px;
+  }
+
+  .discover-result-card {
+    padding: 15px;
+  }
+
+}
+
+/* =========================================
+   DISCOVER FOOD RESULTS
+========================================= */
+
+.discover-food-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin: 24px 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   FOOD CARD
+========================================= */
+
+.discover-food-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discover-food-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.discover-food-image {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   FOOD INFORMATION
+========================================= */
+
+.discover-food-information {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 13px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.discover-food-information h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #252525;
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+
+.discover-food-country {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 8px;
+}
+
+.discover-food-information p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #777777;
+  margin: 0 0 12px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================================
+   PRICE AND RATING
+========================================= */
+
+.discover-food-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.discover-food-bottom strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f47721;
+  white-space: nowrap;
+}
+
+.discover-food-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #555555;
+  white-space: nowrap;
+}
+
+.discover-food-rating svg {
+  color: #f5a623;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 768px) {
+  .discover-food-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .discover-food-image {
+    height: 175px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .discover-food-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .discover-food-card {
+    border-radius: 12px;
+  }
+
+  .discover-food-image {
+    height: 125px;
+  }
+
+  .discover-food-information {
+    padding: 10px;
+  }
+
+  .discover-food-information h3 {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .discover-food-country {
+    font-size: 11px;
+  }
+
+  .discover-food-information p {
+    font-size: 12px;
+    line-height: 1.45;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .discover-food-bottom {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .discover-food-bottom strong {
+    font-size: 13px;
+  }
+
+  .discover-food-rating {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .discover-food-results {
+    gap: 8px;
+  }
+
+  .discover-food-image {
+    height: 110px;
+  }
+
+  .discover-food-information {
+    padding: 8px;
+  }
+
+  .discover-food-information h3 {
+    font-size: 13px;
+  }
+
+  .discover-food-bottom strong {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   DISCOVER ADD TO CART BUTTON
+========================================= */
+
+.discover-add-to-cart {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 8px;
+  border: none;
+  border-radius: 8px;
+  background: #f47721;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.discover-add-to-cart:hover {
+  background: #df6414;
+}
+
+.discover-add-to-cart:active {
+  transform: scale(0.98);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .discover-add-to-cart {
+    padding: 10px 6px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
