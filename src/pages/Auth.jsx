@@ -5,7 +5,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import dammysLogo from "../assets/Dammy's Logo.png";
 import "./Auth.css";
 
-const API_BASE_URL = "https://https://restaurant-backend-production-b36b.up.railway.app";
+const API_BASE_URL = "https://restaurant-backend-production-b36b.up.railway.app";
 function Auth() {
     const navigate = useNavigate();
     const location = useLocation();

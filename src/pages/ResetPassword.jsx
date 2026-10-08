@@ -27,7 +27,7 @@ function ResetPassword() {
 
     try {
       const response = await fetch(
-        "https://https://restaurant-backend-production-b36b.up.railway.app/api/auth/reset-password/",
+        "https://restaurant-backend-production-b36b.up.railway.app/api/auth/reset-password/",
         {
           method: "POST",
           headers: {

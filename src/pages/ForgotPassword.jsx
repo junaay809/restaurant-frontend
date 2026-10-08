@@ -17,7 +17,7 @@ function ForgotPassword() {
 
     try {
       const response = await fetch(
-        "https://https://restaurant-backend-production-b36b.up.railway.app/api/auth/forgot-password/",
+        "https://restaurant-backend-production-b36b.up.railway.app/api/auth/forgot-password/",
         {
           method: "POST",
           headers: {
