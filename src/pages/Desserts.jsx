@@ -24,7 +24,7 @@ import dammysLogo from "../assets/Dammy's Logo.png";
    API CONFIGURATION
 ===================================================== */
 
-const API_URL = "https://https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=desserts";
+const API_URL = "https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=desserts";
 
 export const desserts = [];
 

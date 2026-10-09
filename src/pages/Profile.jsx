@@ -47,7 +47,7 @@ const PROFILE_FAVORITES_KEY = "dammySpiceFavorites";
 const PROFILE_ORDERS_KEY = "dammySpiceOrders";
 const PROFILE_NOTIFICATIONS_KEY =
   "dammySpiceNotifications";
-const API_BASE_URL = "https://https://restaurant-backend-production-b36b.up.railway.app";
+const API_BASE_URL = "https://restaurant-backend-production-b36b.up.railway.app";
 /* =========================================
    AUTHENTICATED API REQUEST
 ========================================= */
@@ -258,7 +258,7 @@ const savePassword = async () => {
 
   try {
     const response = await fetch(
-      "https://https://restaurant-backend-production-b36b.up.railway.app/api/auth/password/change/",
+      "https://restaurant-backend-production-b36b.up.railway.app/api/auth/password/change/",
       {
         method: "POST",
         headers: {
@@ -313,7 +313,7 @@ const saveEmail = async () => {
 
   try {
     const response = await fetch(
-      "https://https://restaurant-backend-production-b36b.up.railway.app/api/auth/profile/update/",
+      "https://restaurant-backend-production-b36b.up.railway.app/api/auth/profile/update/",
       {
         method: "PUT",
         headers: {
@@ -363,7 +363,7 @@ const savePhoneNumber = async () => {
 
   try {
     const response = await fetch(
-      "https://https://restaurant-backend-production-b36b.up.railway.app/api/auth/profile/update/",
+      "https://restaurant-backend-production-b36b.up.railway.app/api/auth/profile/update/",
       {
         method: "PUT",
         headers: {

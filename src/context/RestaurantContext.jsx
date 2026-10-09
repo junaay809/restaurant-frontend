@@ -7,7 +7,7 @@ import React, {
 
 const RestaurantContext = createContext();
 
-const API_BASE_URL = "https://https://restaurant-backend-production-b36b.up.railway.app";
+const API_BASE_URL = "https://restaurant-backend-production-b36b.up.railway.app";
 /* =========================================
    AUTHENTICATED FETCH
 ========================================= */

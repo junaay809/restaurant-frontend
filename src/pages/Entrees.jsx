@@ -510,7 +510,7 @@ const [error, setError] = useState("");
   const fetchEntrees = async () => {
     try {
       const response = await fetch(
-        "https://https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=entrees"
+        "https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=entrees"
       );
 
       if (!response.ok) {

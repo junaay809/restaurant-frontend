@@ -511,7 +511,7 @@ const [error, setError] = useState("");
   const fetchAppetizers = async () => {
     try {
       const response = await fetch(
-        "https://https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=appetizers"
+        "https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=appetizers"
       );
 
       if (!response.ok) {

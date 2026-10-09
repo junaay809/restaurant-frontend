@@ -53,7 +53,7 @@ useEffect(() => {
   const fetchMenuItems = async () => {
     try {
       const response = await fetch(
-        "https://https://restaurant-backend-production-b36b.up.railway.app/api/menu/"
+        "https://restaurant-backend-production-b36b.up.railway.app/api/menu/"
       );
 
       if (!response.ok) {

@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import "./Reviews.css";
 
-const API_BASE_URL = "https://https://restaurant-backend-production-b36b.up.railway.app";
+const API_BASE_URL = "https://restaurant-backend-production-b36b.up.railway.app";
 function Reviews() {
   const { itemId } = useParams();
   const navigate = useNavigate();
@@ -286,7 +286,7 @@ function Reviews() {
                 src={
                   food.image.startsWith("http")
                     ? food.image
-                    : `https://https://restaurant-backend-production-b36b.up.railway.app${food.image}`
+                    : `https://restaurant-backend-production-b36b.up.railway.app${food.image}`
                 }
                 alt={food.name}
                 className="reviews-food-image"

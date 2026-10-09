@@ -431,7 +431,7 @@ const [error, setError] = useState("");
   const fetchDrinks = async () => {
     try {
       const response = await fetch(
-        "https://https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=drinks"
+        "https://restaurant-backend-production-b36b.up.railway.app/api/menu/?category=drinks"
       );
 
       if (!response.ok) {
