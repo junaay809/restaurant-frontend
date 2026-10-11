@@ -15,7 +15,7 @@ class WalletSerializer(serializers.ModelSerializer):
         ]
 
         read_only_fields = fields
-q
+
 
 class WalletTransactionSerializer(serializers.ModelSerializer):
 
