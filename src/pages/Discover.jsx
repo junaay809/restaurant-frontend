@@ -211,7 +211,7 @@ const Discover = () => {
       });
 
       const response = await fetch(
-        `${API_BASE_URL}/discover/?${params.toString()}`,
+        `${API_BASE_URL}/api/menu/discover?${params.toString()}`,
         {
           method: "GET",
           headers: {
@@ -219,8 +219,10 @@ const Discover = () => {
           },
         }
       );
-
+console.log(response, "This is a response")
       const data = await response.json();
+
+console.log(data, "This is the data")
 
       if (!response.ok) {
         throw new Error(
