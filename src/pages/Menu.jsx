@@ -23,8 +23,8 @@ import {
   Plus,
   Check,
 } from "lucide-react";
-import { API_BASE_URL } from "../api";
 import "./Menu.css";
+
 
 /* =========================================
    LOCAL IMAGES
@@ -42,11 +42,12 @@ import entree from "../assets/entree.jpg";
 
 import dammysLogo from "../assets/Dammy's Logo.png";
 
-
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://restaurant-backend-production-b36b.up.railway.app";
 /* =========================================
    MENU COMPONENT
 ========================================= */
-const API_BASE_URL = "https://restaurant-backend-production-b36b.up.railway.app";
 function Menu() {
 
   const navigate = useNavigate();
@@ -219,8 +220,7 @@ useEffect(() => {
 
 useEffect(() => {
   const handleAddressUpdate = (event) => {
-    const updatedAddresses =
-      event.detail;
+    const updatedAddresses = event.detail;
 
     if (!Array.isArray(updatedAddresses)) {
       return;
@@ -228,10 +228,9 @@ useEffect(() => {
 
     setAddresses(updatedAddresses);
 
-    const defaultAddress =
-      updatedAddresses.find(
-        (address) => address.is_default
-      );
+    const defaultAddress = updatedAddresses.find(
+      (address) => address.is_default
+    );
 
     if (defaultAddress) {
       setSelectedAddress(defaultAddress);
@@ -249,26 +248,10 @@ useEffect(() => {
   );
 
   return () => {
-    const handleAddressUpdate = (updatedAddresses) => {
-  if (!Array.isArray(updatedAddresses)) {
-    return;
-  }
-
-  setAddresses(updatedAddresses);
-
-  const defaultAddress = updatedAddresses.find(
-    (address) => address.is_default
-  );
-
-  if (defaultAddress) {
-    setSelectedAddress(defaultAddress);
-
-    localStorage.setItem(
-      "dammySpiceSelectedAddress",
-      JSON.stringify(defaultAddress)
+    window.removeEventListener(
+      "dammy-spice-address-updated",
+      handleAddressUpdate
     );
-  }
-};
   };
 }, []);
 
@@ -817,8 +800,7 @@ const handleAddressSelect = (address) => {
                 (address) => {
 
                   const isSelected =
-                    selectedAddress.id ===
-                    address.id;
+  selectedAddress?.id === address.id;
 
 
                   return (
