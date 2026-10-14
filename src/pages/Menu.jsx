@@ -738,7 +738,7 @@ const handleAddressSelect = (address) => {
 
           <span>
 
-            {selectedAddress.address}
+            {selectedAddress?.address || "Select delivery address"}
 
           </span>
 
