@@ -42,9 +42,9 @@ import entree from "../assets/entree.jpg";
 
 import dammysLogo from "../assets/Dammy's Logo.png";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://restaurant-backend-production-b36b.up.railway.app";
+// const API_BASE_URL =
+//   import.meta.env.VITE_API_URL ||
+//   "https://restaurant-backend-production-b36b.up.railway.app";
 /* =========================================
    MENU COMPONENT
 ========================================= */
