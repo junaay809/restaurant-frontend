@@ -1,0 +1,5 @@
+.env
+.env.*
+restaurant/.env
+restaurant/staticfiles/
+!.env.example
