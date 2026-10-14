@@ -89,7 +89,7 @@ function Menu() {
         setCategoriesError("");
 
         const response = await fetch(
-          `${API_BASE_URL}/api/menu/categories/`
+          `${API_BASE_URL}/api/menu`
         );
 
         if (!response.ok) {
