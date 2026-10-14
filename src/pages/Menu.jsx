@@ -23,7 +23,7 @@ import {
   Plus,
   Check,
 } from "lucide-react";
-
+import { API_BASE_URL } from "../api";
 import "./Menu.css";
 
 /* =========================================
@@ -46,7 +46,7 @@ import dammysLogo from "../assets/Dammy's Logo.png";
 /* =========================================
    MENU COMPONENT
 ========================================= */
-
+const API_BASE_URL = "https://restaurant-backend-production-b36b.up.railway.app";
 function Menu() {
 
   const navigate = useNavigate();
