@@ -3,3 +3,6 @@
 restaurant/.env
 restaurant/staticfiles/
 !.env.example
+
+# Dependencies are installed from package-lock.json during deployment.
+node_modules/
